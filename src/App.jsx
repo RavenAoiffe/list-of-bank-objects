@@ -1,15 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect } from 'react'
 
+
+const baseURL = `${import.meta.env.VITE_API_URL_DEV}`;
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const makeAPICall = async () => {
+    try {
+    const response = await fetch(baseURL);
+      const data = await response.json();
+      console.log({ data })
+
+    }
+    catch (e) {
+      console.log(e)
+    }
+  }
+  useEffect(() => {
+    makeAPICall();
+  }, [])
 
   return (
     <>
       <p className="text-3xl">
-        Paga-todo
+        Bank Objects
       </p>
     </>
   )
