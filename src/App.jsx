@@ -1,16 +1,22 @@
-import { useEffect } from 'react'
-
+import { useState,useEffect } from 'react'
+import Header from './components/Layout/Header';
+import Spiner from './components/Layout/Spiner';
+import BankList from './components/BankList';
 
 const baseURL = `${import.meta.env.VITE_API_URL_DEV}`;
 
 function App() {
 
+  const [listOfBank, setListOfBank] = useState([]);
+  const [charge, setCharge] = useState(false);
+
   const makeAPICall = async () => {
     try {
-    const response = await fetch(baseURL);
+      setCharge(true);
+      const response = await fetch(baseURL);
       const data = await response.json();
-      console.log({ data })
-
+      setListOfBank(data)
+      setCharge(false)
     }
     catch (e) {
       console.log(e)
@@ -21,11 +27,15 @@ function App() {
   }, [])
 
   return (
-    <>
-      <p className="text-3xl">
-        Bank Objects
-      </p>
-    </>
+    <div className='container mx-auto'>
+    <Header>List of Bank Objects</Header>
+      <div>
+        {charge && <Spiner/> }
+          <BankList 
+          listOfBank={ listOfBank}
+          />
+      </div>
+    </div>
   )
 }
 
