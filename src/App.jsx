@@ -8,23 +8,27 @@ const baseURL = `${import.meta.env.VITE_API_URL_DEV}`;
 function App() {
 
   const [listOfBank, setListOfBank] = useState([]);
-  const [charge, setCharge] = useState(false);
+  const [charge, setCharge] = useState(true);
 
   const makeAPICall = async () => {
     try {
-      setCharge(true);
       const response = await fetch(baseURL);
       const data = await response.json();
-      setListOfBank(data)
-      setCharge(false)
+      setTimeout( ()=>{
+        setCharge(false)
+        setListOfBank(data)
+      },1000)
+
     }
     catch (e) {
       console.log(e)
     }
   }
   useEffect(() => {
-    makeAPICall();
+      makeAPICall()
   }, [])
+
+
 
   return (
     <div className='container mx-auto'>

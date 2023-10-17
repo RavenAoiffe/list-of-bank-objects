@@ -2,7 +2,7 @@ const BankList = ({ listOfBank }) => {
     return (
         <>
             {listOfBank.length ? (
-                <div className="w-full bg-white shadow mt-5 table-auto">
+                <div className="w-full bg-white shadow mt-5 table-auto transition-opacity">
                     <p className="bg-purple-600 text-white text-center py-3">Banks</p>
                     {listOfBank.map(bank => (
                         <div className="flex md:flex-row flex-col border items-center">
@@ -21,7 +21,7 @@ const BankList = ({ listOfBank }) => {
 
                 </div>
             ) : (
-                '<p className="text-center mt-10">No hay clientes aún</p>'
+                <p className="text-center mt-10">Cargando...</p>
             )}
         </>
     );
