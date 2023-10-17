@@ -1,6 +1,7 @@
 import { useState,useEffect } from 'react'
 import Header from './components/Layout/Header';
 import Spiner from './components/Layout/Spiner/Spiner';
+
 import BankList from './components/BankList';
 
 const baseURL = `${import.meta.env.VITE_API_URL_DEV}`;
@@ -39,7 +40,8 @@ function App() {
     <div className='container mx-auto'>
       <Header>List of Bank Objects</Header>
 
-      <button className='bg-white border-black border text-black p-2 rounded-md hover:bg-black hover:text-white text-md'
+
+      <button className='shadow-md bg-white border-black border text-black p-2 rounded-md hover:bg-black hover:text-white text-md mx-3 md:mx-0 w-11/12  md:w-40'
         onClick={recall}
       >Search</button>
         <div>
