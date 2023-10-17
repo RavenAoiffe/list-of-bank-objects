@@ -1,6 +1,6 @@
 import { useState,useEffect } from 'react'
 import Header from './components/Layout/Header';
-import Spiner from './components/Layout/Spiner';
+import Spiner from './components/Layout/Spiner/Spiner';
 import BankList from './components/BankList';
 
 const baseURL = `${import.meta.env.VITE_API_URL_DEV}`;
