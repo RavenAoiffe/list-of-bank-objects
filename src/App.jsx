@@ -4,7 +4,7 @@ import Spiner from './components/Layout/Spiner/Spiner';
 
 import BankList from './components/BankList';
 
-const baseURL = `${import.meta.env.VITE_API_URL_DEV}`;
+const baseURL = `${import.meta.env.VITE_API_URL_PROD}`;
 
 function App() {
 
@@ -17,9 +17,10 @@ function App() {
       
         const response = await fetch(baseURL);
         const data = await response.json();
+        const bankList = data.bankList;
         setTimeout( ()=>{
           setCharge(false)
-          setListOfBank(data)
+          setListOfBank(bankList)
       },1500)
 
     }
