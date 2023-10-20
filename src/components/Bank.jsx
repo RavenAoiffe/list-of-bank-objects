@@ -10,10 +10,11 @@ const Bank = ({bank, darkMode}) => {
                         <img src={bank.url}/>
                     </div>
                     <ul className="m-2 py-1">
-                        <li className="p-2 ">
-                            <strong> Bank name:</strong> {bankName}</li>
-                        <li className="p-2"><strong>Age:</strong> {age}</li>
-                        <li className="p-2"><strong>Description:</strong> {description}</li>
+                        <li className="p-2 text-2xl">
+                           {bankName}
+                        </li>
+                        <li className="py-0 px-2"> {description}</li>
+                        <li className="p-2">Age: {age}</li>
                     </ul>
                 </div>
 </div>
