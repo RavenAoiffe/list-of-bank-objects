@@ -11,7 +11,7 @@ const Bank = ({bank, darkMode}) => {
                     </div>
                     <ul className="m-2 py-1">
                         <li className="p-2 text-2xl">
-                           {bankName}
+                        <strong>{bankName}</strong>
                         </li>
                         <li className="py-0 px-2"> {description}</li>
                         <li className="p-2">Age: {age}</li>
