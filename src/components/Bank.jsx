@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Bank = ({bank}) => {
+const Bank = ({bank, darkMode}) => {
 
     const {bankName,age,description} = bank;
     return (
         <div>
-            <div className="flex md:flex-row flex-col border items-center">
+            <div className={darkMode ? "text-neutral-400 flex md:flex-row flex-col border items-center" :"text-black flex md:flex-row flex-col border items-center" }>
                     <div className="w-32 p-3" >
                         <img src={bank.url}/>
                     </div>
