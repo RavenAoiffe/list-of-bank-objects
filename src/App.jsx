@@ -3,7 +3,7 @@ import Header from './components/Layout/Header';
 import Spiner from './components/Layout/Spiner/Spiner';
 import BankList from './components/BankList';
 import Footer from './components/Layout/Footer/Footer';
-
+import ButtonTop from './components/Layout/Top/ButtonTop';
 import './components/Layout//header.css';
 
 
@@ -57,7 +57,7 @@ function App() {
   return (
     <>
       <Header darkMode={darkMode}>LBO</Header>
-        <div className="md:absolute mb-9 right-0 flex top-0 md:my-3 md:mt-3 gap-2 mx-4 mt-8">
+        <div className="md:absolute mb-9 right-0 flex top-0 md:my-3 md:mt-3 gap-2 mx-4 mt-4">
           <button className=
           {darkMode ? `shadow-md border bg-neutral-900 text-white p-2 rounded-md text-md mx-3 md:mx-0 w-11/12  md:w-40` :`shadow-md bg-white border text-black p-2 rounded-md hover:shadow-lg text-md mx-3 md:mx-0 w-11/12  md:w-40`}
             onClick={recall}
@@ -75,7 +75,10 @@ function App() {
             
           </div>
       </div>
-      <Footer></Footer>
+      <Footer
+       darkMode={darkMode}
+       />
+      <ButtonTop  darkMode={darkMode}/>
     </>
   )
 }
