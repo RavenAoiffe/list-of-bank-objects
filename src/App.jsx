@@ -57,7 +57,7 @@ function App() {
   return (
     <div className='container mx-auto'>
       <Header darkMode={darkMode}>List of Bank Objects</Header>
-      <div className="absolute right-0 flex top-0 my-3 gap-2 mx-4">
+      <div className="md:absolute right-0 flex top-0 my-3 gap-2 mx-4">
         <button className=
         {darkMode ? `shadow-md bg-neutral-900 border text-white p-2 rounded-md text-md mx-3 md:mx-0 w-11/12  md:w-40` :`shadow-md bg-white border text-black p-2 rounded-md hover:shadow-lg text-md mx-3 md:mx-0 w-11/12  md:w-40`}
           onClick={recall}
