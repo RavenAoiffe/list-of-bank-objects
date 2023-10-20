@@ -2,7 +2,7 @@ import { useState,useEffect } from 'react'
 import Header from './components/Layout/Header';
 import Spiner from './components/Layout/Spiner/Spiner';
 import BankList from './components/BankList';
-
+import Footer from './components/Layout/Footer/Footer';
 
 import './components/Layout//header.css';
 
@@ -55,25 +55,28 @@ function App() {
     }
   }
   return (
-    <div className='container mx-auto'>
-      <Header darkMode={darkMode}>List of Bank Objects</Header>
-      <div className="md:absolute right-0 flex top-0 my-3 gap-2 mx-4">
-        <button className=
-        {darkMode ? `shadow-md bg-neutral-900 border text-white p-2 rounded-md text-md mx-3 md:mx-0 w-11/12  md:w-40` :`shadow-md bg-white border text-black p-2 rounded-md hover:shadow-lg text-md mx-3 md:mx-0 w-11/12  md:w-40`}
-          onClick={recall}
-        >Search</button>
-        <a className="dark-mode hover:shadow-lg border rounded-lg" onClick={activeDarkMode} title='dark mode'>
-            <div className={darkMode ? `sun icon-dark-mode bg-neutral-900` :`moon icon-dark-mode`}></div>
-        </a>
-      </div>
-        <div>
-          {charge ? <Spiner darkMode={darkMode}/> :  <BankList 
-            listOfBank={ listOfBank}
-            darkMode={darkMode}
-            />}
-           
+    <>
+      <Header darkMode={darkMode}>LBO</Header>
+        <div className="md:absolute mb-9 right-0 flex top-0 md:my-3 md:mt-3 gap-2 mx-4 mt-8">
+          <button className=
+          {darkMode ? `shadow-md border bg-neutral-900 text-white p-2 rounded-md text-md mx-3 md:mx-0 w-11/12  md:w-40` :`shadow-md bg-white border text-black p-2 rounded-md hover:shadow-lg text-md mx-3 md:mx-0 w-11/12  md:w-40`}
+            onClick={recall}
+          >Search</button>
+          <a className="dark-mode hover:shadow-lg border rounded-lg" onClick={activeDarkMode} title='dark mode'>
+              <div className={darkMode ? `sun icon-dark-mode bg-neutral-900` :`moon icon-dark-mode`}></div>
+          </a>
         </div>
-    </div>
+        <div className='container mx-auto'>
+          <div>
+            {charge ? <Spiner darkMode={darkMode}/> :  <BankList 
+              listOfBank={ listOfBank}
+              darkMode={darkMode}
+              />}
+            
+          </div>
+      </div>
+      <Footer></Footer>
+    </>
   )
 }
 
