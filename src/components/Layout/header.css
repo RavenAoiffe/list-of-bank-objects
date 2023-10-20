@@ -7,8 +7,8 @@
    /* border:1px solid #fff;*/
 }
 .icon-dark-mode{
-    width: 53px;
-    height: 51px;
+    width: 43px;
+    height: 43px;
     background-size: 75%;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -32,4 +32,10 @@
     height: 55px;
     background-size: contain;
     background-repeat: no-repeat;
+}
+.top{
+    background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --><svg fill="%23000000" width="50px" height="50px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M17.504 26.025l.001-14.287 6.366 6.367L26 15.979 15.997 5.975 6 15.971 8.129 18.1l6.366-6.368v14.291z"/></svg>');
+}
+.bg-neutral-900 .top{
+    background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --><svg fill="%23fff" width="50px" height="50px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M17.504 26.025l.001-14.287 6.366 6.367L26 15.979 15.997 5.975 6 15.971 8.129 18.1l6.366-6.368v14.291z"/></svg>');
 }

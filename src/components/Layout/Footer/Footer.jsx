@@ -1,7 +1,7 @@
-const Footer = () => {
+const Footer = ({darkMode}) => {
     return (
-        <div className="py-9 w-full text-center text-1md ">
-            <p className="border-top">-2023-</p>
+        <div className="py-4 w-full text-center text-1md ">
+            <p className={darkMode ? "text-white border-top" : "border-top"}>-2023-</p>
         </div>
     );
 }
