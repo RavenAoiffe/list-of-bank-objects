@@ -1,5 +1,6 @@
 import {generarId}  from '../../helpers';
 import Bank from './Bank';
+import Spiner from './Layout/Spiner/Spiner';
 const BankList = ({ listOfBank, darkMode}) => {
     return (
         <>
@@ -17,7 +18,7 @@ const BankList = ({ listOfBank, darkMode}) => {
 
                 </div>
             ) : (
-                <p className="text-center mt-10">Wait please...</p>
+                <Spiner darkMode={darkMode}/>
             )}
         </>
     );
